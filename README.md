@@ -4,24 +4,26 @@
 
 * **URL**
 
-  <_host_>:9091/usuario/all         `GET`       getAllUsers
-  <_host_>:9091/usuario/<_id_>      `GET`       getUserDetail
-  <_host_>:9091/usuario/<_id_>      `DELETE`    deleteUser
-  <_host_>:9091/usuario/add         `POST`      createUser
-  <_host_>:9091/usuario/add         `PUT`       updateUser
-  <_host_>:9091/usuario/search?nombre=<_host_>  `GET`  searchUserByName
+<_host_>:9091/
+├── usuario/
+│   ├── all                       `GET`         getAllUsers
+│   ├── <_id_>                    `GET`         getUserDetail
+│   ├── <_id_>                    `DELETE`      deleteUser
+│   ├── add                       `POST`        createUser #Bodyparam tipo Usuario 
+│   ├── <_id_>                    `PUT`         updateUser #Bodyparam tipo Usuario 
+│   └── search?nombre=<_nombre_>  `GET`         searchUserByName
+└── rol/
+│   ├── all                       `GET`         getAllRoles
+│   ├── <_id_>                    `GET`         getRole
+│   ├── <_id_>                    `DELETE`      deleteRole
+│   ├── add                       `POST`        createRole #Bodyparam tipo Rol 
+│   ├── <_id_>                    `PUT`         updateRole #Bodyparam tipo Rol 
+│   └── search?nombre=<_nombre_>  `GET`         searchRoleByName
 
-  <_host_>:9091/usuario/all         `GET`       getAllRoles
-  <_host_>:9091/usuario/<_id_>      `GET`       getRole
-  <_host_>:9091/usuario/<_id_>      `DELETE`    deleteRole
-  <_host_>:9091/usuario/add         `POST`      createRole
-  <_host_>:9091/usuario/add         `PUT`       updateRole
-  <_host_>:9091/usuario/search?nombre=<_host_>  `GET`  searchRoleByName
+Donde:
+├─  _id_`=[Integer]`
+└─  _nombre_`=[String]`
 
-    Donde:
-   _id_`=[Integer]`
-   _nombre_`=[String]`
+En la sección mencionada anteriormente se mostraron las peticiones a las que da respuesta el api, las cuales se presentan en este video.
 
-   El la sección mencionada anteriormente se mostraron las peticiones a las que da respuesta el api, las cuales se presentan en este video.
-
-    Author: gybranperez
+***Author: gybranperez***
