@@ -6,24 +6,25 @@
 ```
   <_host_>:9091/
   ├── usuario/
-  │   ├── all                       `GET`         getAllUsers
-  │   ├── <_id_>                    `GET`         getUserDetail
-  │   ├── <_id_>                    `DELETE`      deleteUser
-  │   ├── add                       `POST`        createUser #Bodyparam tipo Usuario 
-  │   ├── <_id_>                    `PUT`         updateUser #Bodyparam tipo Usuario 
-  │   └── search?nombre=<_nombre_>  `GET`         searchUserByName
+  │   ├── all                     `GET`         getAllUsers
+  │   ├── {id}                    `GET`         getUserDetail
+  │   ├── {id}                    `DELETE`      deleteUser
+  │   ├── add                     `POST`        createUser #Bodyparam tipo Usuario 
+  │   ├── {id}                    `PUT`         updateUser #Bodyparam tipo Usuario 
+  │   └── search?nombre={nombre}  `GET`         searchUserByName
   └── rol/
-      ├── all                       `GET`         getAllRoles
-      ├── <_id_>                    `GET`         getRole
-      ├── <_id_>                    `DELETE`      deleteRole
-      ├── add                       `POST`        createRole #Bodyparam tipo Rol 
-      ├── <_id_>                    `PUT`         updateRole #Bodyparam tipo Rol 
-      └── search?nombre=<_nombre_>  `GET`         searchRoleByName
+      ├── all                     `GET`         getAllRoles
+      ├── {id}                    `GET`         getRole
+      ├── {id}                    `DELETE`      deleteRole
+      ├── add                     `POST`        createRole #Bodyparam tipo Rol 
+      ├── {id}                    `PUT`         updateRole #Bodyparam tipo Rol 
+      └── search?nombre={nombre}  `GET`         searchRoleByName
 ```
 Donde:
-├─  _id_`=[Integer]`
-└─  _nombre_`=[String]`
-
+```
+├─  {id}      =   [Integer]
+└─  {nombre}  =   [String]
+```
 En la sección mencionada anteriormente se mostraron las peticiones a las que da respuesta el api, las cuales se presentan en este video.
 
 ***Author: gybranperez***
