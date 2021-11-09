@@ -1,119 +1,295 @@
 {
 	"info": {
-		"_postman_id": "defb528a-028f-4cf4-ae92-da790d36f51b",
+		"_postman_id": "b5edc396-9ee2-4fe0-a350-a019450f741a",
 		"name": "Telcel.UserRoles",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
 		{
-			"name": "GetAllUsers",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "localhost:9091/usuario/all",
-					"host": [
-						"localhost"
-					],
-					"port": "9091",
-					"path": [
-						"usuario",
-						"all"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "getById",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "localhost:9091/usuario/4",
-					"host": [
-						"localhost"
-					],
-					"port": "9091",
-					"path": [
-						"usuario",
-						"4"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "deleteById",
-			"request": {
-				"method": "DELETE",
-				"header": [],
-				"url": {
-					"raw": "localhost:9091/usuario/1",
-					"host": [
-						"localhost"
-					],
-					"port": "9091",
-					"path": [
-						"usuario",
-						"1"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "updateById",
-			"request": {
-				"method": "PUT",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "{\r\n    \"nombre\":\"Carlos\",\r\n    \"apellidoPaterno\":\"Editado\",\r\n    \"apellidoMaterno\":\"Perez\",\r\n    \"idRol\":2\r\n}",
-					"options": {
-						"raw": {
-							"language": "json"
+			"name": "Usuario",
+			"item": [
+				{
+					"name": "GetAllUsers",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:9091/usuario/all",
+							"host": [
+								"localhost"
+							],
+							"port": "9091",
+							"path": [
+								"usuario",
+								"all"
+							]
 						}
-					}
+					},
+					"response": []
 				},
-				"url": {
-					"raw": "localhost:9091/usuario/1",
-					"host": [
-						"localhost"
-					],
-					"port": "9091",
-					"path": [
-						"usuario",
-						"1"
-					]
+				{
+					"name": "getById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:9091/usuario/4",
+							"host": [
+								"localhost"
+							],
+							"port": "9091",
+							"path": [
+								"usuario",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteById",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:9091/usuario/1",
+							"host": [
+								"localhost"
+							],
+							"port": "9091",
+							"path": [
+								"usuario",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateById",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\":\"Carlos\",\r\n    \"apellidoPaterno\":\"Editado\",\r\n    \"apellidoMaterno\":\"Perez\",\r\n    \"idRol\":2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:9091/usuario/1",
+							"host": [
+								"localhost"
+							],
+							"port": "9091",
+							"path": [
+								"usuario",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "searchUserByName",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:9091/usuario/search?nombre=Denisse",
+							"host": [
+								"localhost"
+							],
+							"port": "9091",
+							"path": [
+								"usuario",
+								"search"
+							],
+							"query": [
+								{
+									"key": "nombre",
+									"value": "Denisse"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "addUser",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\":\"Gybran\",\r\n    \"apellidoPaterno\":\"Creado\",\r\n    \"apellidoMaterno\":\"Perez\",\r\n    \"idRol\":2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:9091/usuario/add",
+							"host": [
+								"localhost"
+							],
+							"port": "9091",
+							"path": [
+								"usuario",
+								"add"
+							]
+						}
+					},
+					"response": []
 				}
-			},
-			"response": []
+			]
 		},
 		{
-			"name": "searchUserByName",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "localhost:9091/usuario/search?nombre=Denisse",
-					"host": [
-						"localhost"
-					],
-					"port": "9091",
-					"path": [
-						"usuario",
-						"search"
-					],
-					"query": [
-						{
-							"key": "nombre",
-							"value": "Denisse"
+			"name": "Rol",
+			"item": [
+				{
+					"name": "GetAllRoles",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:9091/rol/all",
+							"host": [
+								"localhost"
+							],
+							"port": "9091",
+							"path": [
+								"rol",
+								"all"
+							]
 						}
-					]
+					},
+					"response": []
+				},
+				{
+					"name": "getById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:9091/rol/1",
+							"host": [
+								"localhost"
+							],
+							"port": "9091",
+							"path": [
+								"rol",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "addRole",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\":\"STREAMER\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:9091/rol/add",
+							"host": [
+								"localhost"
+							],
+							"port": "9091",
+							"path": [
+								"rol",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteById",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:9091/usuario/1",
+							"host": [
+								"localhost"
+							],
+							"port": "9091",
+							"path": [
+								"usuario",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateById",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\":\"FB STREAMER\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:9091/rol/3",
+							"host": [
+								"localhost"
+							],
+							"port": "9091",
+							"path": [
+								"rol",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "searchRoleByName",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:9091/rol/search?nombre=ADMIN",
+							"host": [
+								"localhost"
+							],
+							"port": "9091",
+							"path": [
+								"rol",
+								"search"
+							],
+							"query": [
+								{
+									"key": "nombre",
+									"value": "ADMIN"
+								}
+							]
+						}
+					},
+					"response": []
 				}
-			},
-			"response": []
+			]
 		}
 	]
 }
