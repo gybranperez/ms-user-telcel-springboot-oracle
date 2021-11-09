@@ -3,7 +3,7 @@
   Este proyecto tiene el propósito de demostrar el funcionamiento de un API que lista usuarios y roles.
 
 * **URL**
-
+```
   <_host_>:9091/
   ├── usuario/
   │   ├── all                       `GET`         getAllUsers
@@ -19,7 +19,7 @@
       ├── add                       `POST`        createRole #Bodyparam tipo Rol 
       ├── <_id_>                    `PUT`         updateRole #Bodyparam tipo Rol 
       └── search?nombre=<_nombre_>  `GET`         searchRoleByName
-  
+```
 Donde:
 ├─  _id_`=[Integer]`
 └─  _nombre_`=[String]`
